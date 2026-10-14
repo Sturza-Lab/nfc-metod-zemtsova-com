@@ -98,3 +98,20 @@ header:before{inset:0}
 @media(max-width:760px){.reviews-section{padding-top:45px;padding-bottom:45px}.reviews-head h2{font-size:34px}.reviews-head p{font-size:14px;max-width:240px}.review-controls{margin:18px 0 16px;justify-content:start}.reviews-track{gap:14px}.review-original{flex-basis:82%;padding:0}.review-original .review-open:first-child{height:370px;padding:6px}.reviews-foot{gap:18px;align-items:start}.reviews-foot .primary{font-size:13px;padding:14px 16px;min-width:0}.reviews-foot .reviews-source{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.review-original .review-open:first-child{transition:none}}
 @media(min-width:1101px){.review-original{flex-basis:calc((100% - 40px)/3)}.review-original .review-open:first-child{height:370px}}
+
+/* Mobile first screen: title, photo and audio fit together without scrolling */
+@media(max-width:760px){
+header{height:60px}
+.hero{padding-top:18px}
+.hero h1{font-size:clamp(28px,8vw,34px);line-height:1.08;letter-spacing:-1px}
+.hero .intro{font-size:15px;line-height:1.5;margin:10px 0 0}
+.hero-action-area{margin-top:8px;padding-bottom:0}
+.hero .details{font-size:12px;line-height:1.4;margin:0}
+.hero-photo{margin:14px -24px 0;height:min(39svh,340px)}
+.hero-photo img{height:100%;object-position:62% 30%}
+#audio{padding:14px 0;gap:14px;grid-template-columns:48px 1fr;align-items:center}
+#audio .play{width:48px;height:48px;background:var(--blue);color:#fff;border:0}
+#audio .audio-title{font:400 17px/1.25 Literata,serif;letter-spacing:-.4px;margin-bottom:2px}
+#audio .audio-desc{font-size:11px;line-height:1.35;margin-bottom:0}
+#audio .audio-row input[type=range]{height:26px}
+}
