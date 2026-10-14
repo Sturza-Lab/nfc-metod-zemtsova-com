@@ -131,3 +131,29 @@ header{height:60px}
 .hero-action-art{display:none}
 }
 @media(min-width:761px) and (max-width:1100px){.hero{min-height:640px}.hero .hero-photo img{height:560px;width:auto}}
+
+/* Visit steps: swipe carousel in the same format as reviews */
+.visit-carousel{margin-top:38px;min-width:0}
+.visit-controls{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px}
+.visit-hint{display:inline-flex;align-items:center;gap:8px;font-size:15px;font-weight:600;color:var(--blue);letter-spacing:.2px}
+.visit-hint b{font-weight:600;font-size:20px;line-height:1;animation:visit-nudge 1.6s ease-in-out infinite}
+.visit-carousel.is-scrolled .visit-hint b{animation:none}
+@keyframes visit-nudge{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}
+.visit-arrows{display:flex;gap:10px}
+.visit-arrows button,.review-controls button{width:48px;height:48px;border:0;border-radius:50%;background:var(--blue);color:#fff;font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center;box-shadow:0 4px 12px rgba(45,83,104,.28);transition:background .2s,transform .2s}
+.visit-arrows button:hover:not(:disabled),.review-controls button:hover:not(:disabled){background:#1d3f55;transform:translateY(-1px)}
+.visit-arrows button:disabled,.review-controls button:disabled{background:#b9ccd6;box-shadow:none;cursor:default;opacity:1}
+.review-controls{justify-content:flex-end;margin:0 0 14px}
+.visit-track{list-style:none;margin:0;padding:4px 0 18px;display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:thin;scrollbar-color:#6d9db8 #e3edf2;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.visit-track:focus-visible{outline:3px solid #245675;outline-offset:4px}
+.visit-card{flex:0 0 calc((100% - 32px)/3);scroll-snap-align:start;background:#e6eef1;padding:24px 22px 28px;display:flex;flex-direction:column;min-width:0}
+.visit-art{height:230px;display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+.visit-card .stage-art{margin:0;max-width:none;max-height:none;width:173px;height:230px;aspect-ratio:auto;flex:none}
+.visit-card .stage-art.art-test-fish,.visit-card .stage-art.art-test-knee{width:100%;max-width:300px;height:150px}
+.visit-card-count{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#3f6174;margin-bottom:4px}
+.visit-card-stage{font-size:12px;color:#3f6174;margin-bottom:12px;min-height:1.4em}
+.visit-card h3{font:400 23px/1.25 Literata,serif;letter-spacing:-.5px;margin:0 0 12px;color:var(--ink)}
+.visit-card p{font-size:15px;line-height:1.7;color:#3d5666;margin:0}
+@media(max-width:1100px){.visit-card{flex-basis:calc((100% - 16px)/2)}}
+@media(max-width:760px){.visit-carousel{margin-top:26px}.visit-card{flex-basis:84%}.visit-art{height:210px}.visit-card .stage-art{width:158px;height:210px}.visit-card h3{font-size:22px}.visit-card p{font-size:15px}.review-controls{margin:0 0 12px;justify-content:flex-end}}
+@media(prefers-reduced-motion:reduce){.visit-hint b{animation:none}}
